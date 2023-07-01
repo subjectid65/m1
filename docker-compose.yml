@@ -1,0 +1,14 @@
+services:  
+    fly:
+           image: tomcat:8.5.90-jre11-temurin-jammy
+             
+           restart: always
+            
+   
+           volumes: 
+                - ./ROOT.war:/usr/local/tomcat/webapps/ROOT.war 
+           ports: 
+                 - "80:8080"
+ 
+ 
+
