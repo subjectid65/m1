@@ -1,7 +1,3 @@
-FROM tomcat:8.5.90-jre11-temurin-jammy
-RUN rm -rf /usr/local/tomcat/webapps/*
-ADD ROOT.war /usr/local/tomcat/webapps/ROOT.war
-ENV \
-    PORT=8080 \
-    HOST=0.0.0.0
-EXPOSE 8080
+ FROM jboss/wildfly
+ ADD ROOT.war /opt/jboss/wildfly/standalone/deployments/
+ EXPOSE 8080
