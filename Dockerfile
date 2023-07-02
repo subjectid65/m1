@@ -1,3 +1,4 @@
- FROM jboss/wildfly
- ADD ROOT.war /opt/jboss/wildfly/standalone/deployments/
- EXPOSE 8080
+FROM openjdk:21-slim-buster
+COPY ROOT.war ROT.war 
+CMD ["java", "-jar", "ROOT.war"]
+EXPOSE 8080
