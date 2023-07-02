@@ -4,4 +4,4 @@ ADD ROOT.war /usr/local/tomcat/webapps/ROOT.war
 ENV \
     PORT=8080 \
     HOST=0.0.0.0
-EXPOSE 80
+EXPOSE 8080
